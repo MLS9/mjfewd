@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Strawberry Shortcake</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.6.0/css/bootstrap.min.css"
+  />
+  <style>
+    body {
+      background: linear-gradient(135deg, #fff4f9, #e7e0ff);
+      font-family: 'Segoe UI', sans-serif;
+      padding-bottom: 80px; /* space for bottom nav */
+    }
+    .card {
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+      margin-bottom: 20px;
+    }
+    .recipe-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+    .section-title {
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+    ul, ol {
+      padding-left: 1rem;
+    }
+    .ingredients-list li,
+    .steps-list li {
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+    .navbar {
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      box-shadow: 0 -4px 10px rgba(0,0,0,0.05);
+    }
+    .navbar i {
+      font-size: 1.3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container pt-4">
+    <!-- Title -->
+    <div class="text-center mb-3">
+      <h4 class="font-weight-bold mb-1">🍓 Strawberry Shortcake</h4>
+      <p class="text-muted mb-0">A fluffy, fruity dessert you'll love.</p>
+    </div>
+
+    <!-- Recipe Image -->
+    <div class="card">
+      <img src="https://via.placeholder.com/600x300.png?text=Strawberry+Shortcake" alt="Recipe Image" class="recipe-image">
+    </div>
+
+    <!-- Ingredients -->
+    <div class="card p-3">
+      <div class="section-title">Ingredients</div>
+      <ul class="ingredients-list mb-0">
+        <li>2 cups all-purpose flour</li>
+        <li>1/4 cup granulated sugar</li>
+        <li>1 tbsp baking powder</li>
+        <li>1/2 tsp salt</li>
+        <li>1/2 cup cold butter</li>
+        <li>2/3 cup whole milk</li>
+        <li>1 tsp vanilla extract</li>
+        <li>Fresh strawberries</li>
+        <li>Whipped cream</li>
+      </ul>
+    </div>
+
+    <!-- Steps -->
+    <div class="card p-3">
+      <div class="section-title">Steps</div>
+      <ol class="steps-list mb-0">
+        <li>Preheat oven to 425°F (220°C).</li>
+        <li>Mix flour
