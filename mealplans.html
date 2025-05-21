@@ -8,7 +8,6 @@
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
 
-
   <style>
     body {
       background: linear-gradient(135deg, #e6f9e6, #f1fff1); /* light pastel green */
@@ -54,12 +53,13 @@
   </style>
 </head>
 <body>
-    <div id="navbar"></div>
-    <script>
-      fetch('../navbar.html')
-        .then(response => response.text())
-        .then(data => document.getElementById('navbar').innerHTML = data);
-    </script>
+  <div id="navbar"></div>
+  <script>
+    fetch('../navbar.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('navbar').innerHTML = data);
+  </script>
+  
   <div class="container pt-4">
     <!-- Title -->
     <div class="card">
@@ -166,13 +166,13 @@
     </ul>
     </div>
   </div>
-    <div id="bottomnavbar"></div>
-    <script>
-      fetch('../bottomnavbar.html')
-        .then(response => response.text())
-        .then(data => document.getElementById('bottomnavbar').innerHTML = data);
-    </script>
-
+  
+  <div id="bottomnavbar"></div>
+  <script>
+     fetch('../bottomnavbar.html')
+       .then(response => response.text())
+       .then(data => document.getElementById('bottomnavbar').innerHTML = data);
+  </script>
 
 </body>
   <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
