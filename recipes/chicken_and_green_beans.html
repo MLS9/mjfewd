@@ -54,12 +54,13 @@
   </style>
 </head>
 <body>
-    <div id="navbar"></div>
-    <script>
-      fetch('../navbar.html')
-        .then(response => response.text())
-        .then(data => document.getElementById('navbar').innerHTML = data);
-    </script>
+  <div id="navbar"></div>
+  <script>
+    fetch('../navbar.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('navbar').innerHTML = data);
+  </script>
+  
   <div class="container pt-4">
     <!-- Title -->
     <div class="card">
