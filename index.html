@@ -308,6 +308,12 @@
         
 
     <br><br><br><br><br>
+  <div id="bottomnavbar"></div>
+  <script>
+     fetch('bottomnavbar.html')
+       .then(response => response.text())
+       .then(data => document.getElementById('bottomnavbar').innerHTML = data);
+  </script>
 </body>
 
 
