@@ -68,7 +68,7 @@
 
     <!-- Recipe Image -->
     <div class="card text-center">
-      <img src="/mjfewd/images/plate.png" alt="Recipe Image" class="recipe-image img-fluid mx-auto d-block">
+      <img src="/mjfewd/images/carne_con_chile.png" alt="Recipe Image" class="recipe-image img-fluid mx-auto d-block">
     </div>
 
     <!-- Ingredients -->
