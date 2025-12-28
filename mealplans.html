@@ -50,10 +50,15 @@
     .navbar i {
       font-size: 1.3rem;
     }
-    .ingredient-item input[type="checkbox"]:checked + span,
-    .ingredient-item input[type="checkbox"]:checked {
-    text-decoration: line-through;
-    opacity: 0.6;
+    .ingredient-check {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.ingredient-check input[type="checkbox"] {
+  accent-color: #6c757d; /* Bootstrap secondary */
 }
 
   </style>
