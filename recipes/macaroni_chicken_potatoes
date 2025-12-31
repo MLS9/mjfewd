@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Recipe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #e6f9e6, #f1fff1); /* light pastel green */
+      font-family: 'Segoe UI', sans-serif;
+      padding-bottom: 80px;
+    }
+    .card {
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+      margin-bottom: 20px;
+      background-color: #ffffff;
+      padding: 16px;
+    }
+    .recipe-image {
+      width: 50%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 16px;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+    ul, ol {
+      padding-left: 1.2rem;
+    }
+    .ingredients-list li,
+    .steps-list li {
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+    .navbar {
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      box-shadow: 0 -4px 10px rgba(0,0,0,0.05);
+    }
+    .navbar i {
+      font-size: 1.3rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar"></div>
+  <script>
+    fetch('../navbar.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('navbar').innerHTML = data);
+  </script>
+  
+  <div class="container pt-4">
+    <!-- Title -->
+    <div class="card">
+      <div class="text-center">Macaroni with Chicken and Potatoes</div>
+    </div>
+
+    <!-- Recipe Image -->
+    <div class="card text-center">
+      <img src="/mjfewd/images/plate.png" alt="Recipe Image" class="recipe-image img-fluid mx-auto d-block">
+    </div>
+
+    <!-- Ingredients -->
+    <div class="card">
+      <div class="section-title">Ingredients</div>
+    <p></p>
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        chicken breast
+      <span class="bg-secondary text-white rounded-pill fs-4 p-2">2</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        potatoes
+      <span class="bg-secondary text-white rounded-pill fs-4 p-2">4 large</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        macaroni pasta
+      <span class="bg-secondary text-white rounded-pill fs-4 p-2">1/2 box</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        heavy whipping cream
+      <span class="bg-secondary text-white rounded-pill fs-4 p-2">small carton</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        cheddar cheese
+      <span class="bg-secondary text-white rounded-pill fs-4 p-2">1 cup</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        colby jack cheese
+      <span class="bg-secondary text-white rounded-pill fs-4 p-2">1 cup</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        butter
+      <span class="bg-secondary text-white rounded-pill fs-4 p-2">3 tbsp</span>
+      </li>
+      <br>
+      <p>Potatoes seasoning</p>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        avocodo oil 
+      <span class="bg-secondary text-white rounded-pill fs-4 p-2">1 sp</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        salt
+      <span class="bg-secondary text-white rounded-pill fs-4 p-2">1 tsp</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        pepper
+      <span class="bg-secondary text-white rounded-pill fs-4 p-2">1 tsp</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        paprika
+      <span class="bg-secondary text-white rounded-pill fs-4 p-2">1 tsp</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        cayenne
+      <span class="bg-secondary text-white rounded-pill fs-4 p-2">1 tsp</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        garlic powder
+      <span class="bg-secondary text-white rounded-pill fs-4 p-2">1 tsp</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        chili powder
+      <span class="bg-secondary text-white rounded-pill fs-4 p-2">1/2 tsp</span>
+      </li>
+
+      <br>
+      <p>Macaroni seasoning</p>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        salt
+      <span class="bg-secondary text-white rounded-pill fs-4 p-2">1 sp</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        paprika
+      <span class="bg-secondary text-white rounded-pill fs-4 p-2">1 tsp</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        garlic powder
+      <span class="bg-secondary text-white rounded-pill fs-4 p-2">1 tsp</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        pepper
+      <span class="bg-secondary text-white rounded-pill fs-4 p-2">1/2 tsp</span>
+      </li>
+    </ul>
+    </div>
+
+    <!-- Steps -->
+    <div class="card">
+      <div class="section-title">Steps</div>
+    <p></p>
+    <ul class="list-group">
+      <li class="list-group-item">
+        1. put pasta to boil then wash and cut potatoes
+      </li>
+      <li class="list-group-item">
+        2. put cut pieces in a bowl and season
+      </li>
+      <li class="list-group-item">
+        3. put potatoes to cook in air fryer for 16 min at 360 degrees (if some are not cooked add more time)
+      </li>
+      <li class="list-group-item">
+        4. cut and season chicken with salt, pepper, garlic powder, and paprika
+      </li>
+      <li class="list-group-item">
+        5. add 3 tbsp to a pan and when it melts fully add in the carton of heavy whipping cream
+      </li>
+      <li class="list-group-item">
+        6. add in the mixed seasonings and when its fully mixed in and boiling add the cheese
+      </li>
+      <li class="list-group-item">
+        7. mix cheese together until its all melted and then add in the pasta
+      </li>
+      <li class="list-group-item">
+        8. cook chicken breast on low medium heat with a little of oil for each piece
+      </li>
+    </ul>
+    </div>
+  </div>
+  
+  <div id="bottomnavbar"></div>
+  <script>
+     fetch('../bottomnavbar.html')
+       .then(response => response.text())
+       .then(data => document.getElementById('bottomnavbar').innerHTML = data);
+  </script>
+
+</body>
+  <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+</html>
