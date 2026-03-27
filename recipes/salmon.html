@@ -145,13 +145,17 @@
        .then(data => document.getElementById('bottomnavbar').innerHTML = data);
   </script>
   <script>
-  const params = new URLSearchParams(window.location.search);
-
-  if (params.get("hideNav") === "true") {
-    const bottomNav = document.getElementById("bottomnavbar");
-    if (bottomNav) bottomNav.style.display = "none";
-  }
-</script>
+    const params = new URLSearchParams(window.location.search);
+  
+    if (params.get("hideNav") === "true") {
+  
+      const bottomNav = document.getElementById("bottomnavbar");
+      if (bottomNav) bottomNav.style.display = "none";
+  
+      const topNav = document.getElementById("navbar");
+      if (topNav) topNav.style.display = "none";
+    }
+  </script>
 
 </body>
   <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
