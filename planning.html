@@ -52,7 +52,7 @@ body {
 
 <div id="navbar"></div>
 <script>
-fetch('../navbar.html')
+fetch('navbar.html')
   .then(res => res.text())
   .then(data => document.getElementById('navbar').innerHTML = data);
 </script>
@@ -123,7 +123,7 @@ fetch('../navbar.html')
 
 <div id="bottomnavbar"></div>
 <script>
-fetch('../bottomnavbar.html')
+fetch('bottomnavbar.html')
   .then(res => res.text())
   .then(data => document.getElementById('bottomnavbar').innerHTML = data);
 </script>
