@@ -188,7 +188,7 @@ document.getElementById('generateBtn').addEventListener('click', () => {
 
   Object.values(selections).forEach(item => {
     const iframe = document.createElement('iframe');
-    iframe.src = `/mjfewd/recipes/${item}.html`;
+    iframe.src = `/mjfewd/recipes/${item}.html?hideNav=true`;
     iframe.style.width = "100%";
     iframe.style.height = "500px";
     iframe.style.border = "none";
