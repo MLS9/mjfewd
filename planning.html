@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Meal Planning</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+<style>
+body {
+  background: linear-gradient(135deg, #fdf1f3, #fff7f8);
+  font-family: 'Segoe UI', sans-serif;
+  padding-bottom: 100px;
+}
+
+.card {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+  padding: 16px;
+}
+
+/* Sticky summary */
+.sticky-summary {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Option styling */
+.option {
+  padding: 10px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.option.selected {
+  background-color: #f8d7da;
+}
+
+/* Hide radio visually */
+.option input {
+  margin-right: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="navbar"></div>
+<script>
+fetch('../navbar.html')
+  .then(res => res.text())
+  .then(data => document.getElementById('navbar').innerHTML = data);
+</script>
+
+<div class="container pt-3">
+
+  <!-- Sticky Summary -->
+  <div class="card sticky-summary text-center">
+    <div id="summary">
+      <div>Select your meal</div>
+    </div>
+  </div>
+
+  <!-- Protein -->
+  <div class="card">
+    <div class="font-weight-bold mb-2">Protein</div>
+
+    <label class="option">
+      <input type="radio" name="protein" value="chicken"> chicken
+    </label>
+    <label class="option">
+      <input type="radio" name="protein" value="salmon"> salmon
+    </label>
+    <label class="option">
+      <input type="radio" name="protein" value="shrimp"> shrimp
+    </label>
+  </div>
+
+  <!-- Carb -->
+  <div class="card">
+    <div class="font-weight-bold mb-2">Carb</div>
+
+    <label class="option">
+      <input type="radio" name="carb" value="rice"> rice
+    </label>
+    <label class="option">
+      <input type="radio" name="carb" value="potatoes"> potatoes
+    </label>
+    <label class="option">
+      <input type="radio" name="carb" value="mashed-potatoes"> mashed potatoes
+    </label>
+  </div>
+
+  <!-- Veggie -->
+  <div class="card">
+    <div class="font-weight-bold mb-2">Veggie</div>
+
+    <label class="option">
+      <input type="radio" name="veggie" value="broccoli"> broccoli
+    </label>
+    <label class="option">
+      <input type="radio" name="veggie" value="peppers"> bell peppers
+    </label>
+    <label class="option">
+      <input type="radio" name="veggie" value="brussels"> brussel sprouts
+    </label>
+  </div>
+
+  <!-- Button -->
+  <button id="generateBtn" class="btn btn-dark btn-block" disabled>
+    Get Recipe
+  </button>
+
+  <!-- Results -->
+  <div id="results" class="mt-4"></div>
+
+</div>
+
+<div id="bottomnavbar"></div>
+<script>
+fetch('../bottomnavbar.html')
+  .then(res => res.text())
+  .then(data => document.getElementById('bottomnavbar').innerHTML = data);
+</script>
+
+<script>
+// Track selections
+let selections = {
+  protein: null,
+  carb: null,
+  veggie: null
+};
+
+// Update summary
+function updateSummary() {
+  const summary = document.getElementById('summary');
+  const values = Object.values(selections).filter(v => v);
+
+  if (values.length === 0) {
+    summary.innerHTML = "Select your meal";
+  } else {
+    summary.innerHTML = values.join("<br>");
+  }
+
+  // Enable button if all selected
+  document.getElementById('generateBtn').disabled =
+    !(selections.protein && selections.carb && selections.veggie);
+}
+
+// Handle selection
+document.querySelectorAll('input[type=radio]').forEach(input => {
+  input.addEventListener('change', function() {
+
+    // Update state
+    selections[this.name] = this.value;
+
+    // Highlight selected
+    document.querySelectorAll(`input[name="${this.name}"]`).forEach(el => {
+      el.parentElement.classList.remove('selected');
+    });
+
+    this.parentElement.classList.add('selected');
+
+    updateSummary();
+  });
+});
+
+// Generate recipes
+document.getElementById('generateBtn').addEventListener('click', () => {
+
+  const results = document.getElementById('results');
+  results.innerHTML = "";
+
+  Object.values(selections).forEach(item => {
+    const iframe = document.createElement('iframe');
+    iframe.src = `/recipes/${item}.html`;
+    iframe.style.width = "100%";
+    iframe.style.height = "500px";
+    iframe.style.border = "none";
+    iframe.classList.add("card");
+
+    results.appendChild(iframe);
+  });
+});
+</script>
+
+</body>
+</html>
