@@ -26,17 +26,7 @@ background: linear-gradient(
 );
 
 
-
-
-
-
-
-
-
-
-
-
-
+/* for cards, i like this rounded size */
 .m-round-20 {
   border-radius: 20px;  
   overflow: hidden;      
