@@ -1,93 +1,119 @@
+/* =========================
+   GENERAL
+========================= */
+
 body {
-background: linear-gradient(
-135deg,
-#fff8fa,
-#fffdfd
-);
-min-height: 100vh;
-font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(
+        135deg,
+        #fff8fa,
+        #fffdfd
+    );
+
+    min-height: 100vh;
+    font-family: "Segoe UI", sans-serif;
 }
+
+/* =========================
+   NAVBAR
+========================= */
 
 .navbar i {
-font-size: 1.3rem;
-        background: linear-gradient(
-        135deg,
-        #fff4f7,
-        #fff8fb
-    );
+    font-size: 1.3rem;
 }
 
-/* Main page container */
+/* =========================
+   PAGE CONTAINER
+========================= */
+
 .home-container {
-max-width: 1200px;
-margin: 0 auto;
-padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-/* Header */
+/* =========================
+   HEADER
+========================= */
+
 .hero {
-text-align: center;
-margin-bottom: 25px;
+    text-align: center;
+    margin-bottom: 25px;
 }
 
 .hero h1 {
-color: #d96b8a;
-font-size: 2rem;
-font-weight: 700;
-margin-bottom: 5px;
+    color: #d96b8a;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
 }
 
 .hero p {
-color: #888;
-margin-bottom: 0;
+    color: #888;
+    margin-bottom: 0;
 }
 
-/* Search */
+/* =========================
+   SEARCH BAR
+========================= */
+
 .search-input {
     width: 90%;
     max-width: 400px;
-    margin: 0 auto 25px auto;
 
     display: block;
+    margin: 0 auto 25px auto;
 
     border: none;
     border-radius: 25px;
+
     padding: 15px 20px;
 
     box-shadow: 0 8px 20px rgba(0,0,0,.05);
-/* width: 100%;
-border: none;
-border-radius: 20px;
-padding: 15px 20px;
-box-shadow: 0 8px 20px rgba(0,0,0,.05);
-margin-bottom: 25px; */
+
+    transition: all .25s ease;
 }
 
-.search-input {
-outline: none;
-box-shadow: 0 8px 25px rgba(255,182,193,.35);
+.search-input:focus {
+    outline: none;
+
+    box-shadow:
+        0 8px 25px rgba(255,182,193,.35);
 }
 
-/* Recipe Grid */
+/* =========================
+   RECIPE GRID
+========================= */
+
 .recipe-grid {
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
 }
 
-/* Cards */
-.card {
-border: none !important;
-border-radius: 28px !important;
-overflow: hidden;
-background: white;
-box-shadow: 0 10px 30px rgba(255,182,193,.12);
-transition: all .25s ease;
-}
+/* =========================
+   CARDS
+========================= */
 
 .card {
-transform: translateY(-4px);
-box-shadow: 0 15px 40px rgba(255,182,193,.20);
+    border: none !important;
+    border-radius: 28px !important;
+
+    overflow: hidden;
+
+    background: white;
+
+    box-shadow: 0 10px 30px rgba(255,182,193,.12);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 15px 40px rgba(255,182,193,.20);
 }
 
 .card-img-top {
@@ -97,45 +123,58 @@ box-shadow: 0 15px 40px rgba(255,182,193,.20);
 }
 
 .card-body {
-padding: 15px;
+    padding: 15px;
+
+    min-height: 80px;
+
+    display: flex;
+    align-items: center;
 }
 
 .card-title {
-font-size: 1.1rem;
-font-weight: 600;
-margin-bottom: 0;
-color: #333;
+    margin: 0;
+
+    font-size: 1.05rem;
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    color: #333;
 }
 
-.card:hover {
-    transform: translateY(-6px);
-    transition: .25s;
-}
+/* =========================
+   CUSTOM ROUNDING
+========================= */
 
-/* Mobile */
-@media (max-width: 768px) {
-.home-container {
-padding: 15px;
-}
-
-.recipe-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-}
-
-.card-img-top {
-    height: 150px;
-}
-
-.card-title {
-    font-size: 1rem;
-}
-
-}
-
-
-/* for cards, i like this rounded size */
 .m-round-20 {
-  border-radius: 20px;  
-  overflow: hidden;      
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .home-container {
+        padding: 15px;
+    }
+
+    .recipe-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+    .card-img-top {
+        height: 170px;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .search-input {
+        width: 92%;
+    }
 }
