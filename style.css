@@ -91,9 +91,9 @@ box-shadow: 0 15px 40px rgba(255,182,193,.20);
 }
 
 .card-img-top {
-width: 100%;
-height: 180px;
-object-fit: cover;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
 }
 
 .card-body {
