@@ -10,6 +10,11 @@ font-family: "Segoe UI", sans-serif;
 
 .navbar i {
 font-size: 1.3rem;
+        background: linear-gradient(
+        135deg,
+        #fff4f7,
+        #fff8fb
+    );
 }
 
 /* Main page container */
