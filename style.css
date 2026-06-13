@@ -88,6 +88,10 @@ body {
     padding-left: 8px;
     padding-right: 8px;
 }
+#recipeList .col {
+    padding-left: 4px;
+    padding-right: 4px;
+}
 
 /* =========================
    CARDS
