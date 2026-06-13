@@ -84,7 +84,10 @@ body {
    RECIPE GRID
 ========================= */
 
-
+#recipeList {
+    padding-left: 8px;
+    padding-right: 8px;
+}
 
 /* =========================
    CARDS
