@@ -84,15 +84,7 @@ body {
    RECIPE GRID
 ========================= */
 
-.recipe-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 20px;
-}
-#recipeList .col {
-    padding: 6px;
-    margin-bottom: 10px;
-}
+
 
 /* =========================
    CARDS
@@ -165,10 +157,6 @@ body {
         padding: 15px;
     }
 
-    .recipe-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 14px;
-    }
 
     .card-img-top {
         height: 170px;
