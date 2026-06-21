@@ -2,11 +2,7 @@
    GENERAL
 ========================= */
 body {
-    background: linear-gradient(
-        135deg,
-        #fff8fa,
-        #fffdfd
-    );
+    background: #f7f5f2;
     min-height: 100vh;
     font-family: "Segoe UI", sans-serif;
     overflow-x: hidden;
