@@ -64,7 +64,7 @@ body {
 }
 .search-input:focus {
     outline: none;
-    box-shadow: 0 8px 25px rgba(115, 93, 60, 0.35);
+    box-shadow: 0 8px 25px rgba(162, 129, 134, 0.2);
 }
 
 /* =========================
