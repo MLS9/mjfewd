@@ -69,7 +69,6 @@ body {
 
 /* =========================
    RECIPE GRID
-   FIX: no negative margin bleed; row spacing via .col margin-bottom
 ========================= */
 #recipeList {
     /* override Bootstrap's default row negative margins that cause side scroll */
@@ -99,7 +98,7 @@ body {
 }
 .card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 15px 40px rgba(255,182,193,.20);
+    box-shadow: 0 15px 40px rgba(162, 129, 134, 0.2);
 }
 .card-img-top {
     width: 100%;
