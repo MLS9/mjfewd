@@ -91,7 +91,7 @@ body {
     border: none !important;
     border-radius: 18px !important;
     overflow: hidden;
-    background: white;
+    background: #ece8e7;
     box-shadow: 0 10px 30px rgba(255,182,193,.12);
     transition:
         transform .25s ease,
@@ -111,13 +111,15 @@ body {
     min-height: unset;
     display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 .card-title {
     margin: 0;
     font-size: 0.78rem;
     font-weight: 700;
     line-height: 1.2;
-    color: #333;
+    color: #c1adaf;
 }
 
 /* =========================
