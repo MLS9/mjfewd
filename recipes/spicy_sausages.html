@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Recipe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #e6f9e6, #f1fff1); /* light pastel green */
+      font-family: 'Segoe UI', sans-serif;
+      padding-bottom: 80px;
+    }
+    .card {
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+      margin-bottom: 20px;
+      background-color: #ffffff;
+      padding: 16px;
+    }
+    .recipe-image {
+      width: 50%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 16px;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+    ul, ol {
+      padding-left: 1.2rem;
+    }
+    .ingredients-list li,
+    .steps-list li {
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+    .navbar {
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      box-shadow: 0 -4px 10px rgba(0,0,0,0.05);
+    }
+    .navbar i {
+      font-size: 1.3rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar"></div>
+  <script>
+    fetch('../navbar.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('navbar').innerHTML = data);
+  </script>
+  
+  <div class="container pt-4">
+    <!-- Title -->
+    <div class="card">
+      <div class="text-center">Spicy Sausages</div>
+    </div>
+
+    <!-- Recipe Image -->
+    <div class="card text-center">
+      <img src="/mjfewd/images/spicy-sausages.png" alt="Recipe Image" class="recipe-image img-fluid mx-auto d-block">
+    </div>
+
+    <!-- Ingredients -->
+    <div class="card">
+      <div class="section-title">Ingredients</div>
+    <p></p>
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        sausages
+      <span class="bg-secondary text-white rounded-pill fs-4 p-2">6</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        onion
+      <span class="bg-secondary text-white rounded-pill fs-4 p-2">1</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        jalapeno or chile serrano
+      <span class="bg-secondary text-white rounded-pill fs-4 p-2">2</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        tomatoes (small)
+      <span class="bg-secondary text-white rounded-pill fs-4 p-2">3</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        red powder
+      <span class="bg-secondary text-white rounded-pill fs-4 p-2">1/2 tbsp</span>
+      </li>
+      <br>
+      <p>Sauce</p>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        ingredient
+      <span class="bg-secondary text-white rounded-pill fs-4 p-2">4 tbsp</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        ingredient
+      <span class="bg-secondary text-white rounded-pill fs-4 p-2">2 tbsp</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        ingredient
+      <span class="bg-secondary text-white rounded-pill fs-4 p-2">2 tsp</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        ingredient
+      <span class="bg-secondary text-white rounded-pill fs-4 p-2">4 tsp</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        ingredient
+      <span class="bg-secondary text-white rounded-pill fs-4 p-2">1/4 tsp</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        ingredient
+      <span class="bg-secondary text-white rounded-pill fs-4 p-2">2 tsp</span>
+      </li>
+    </ul>
+    </div>
+
+    <!-- Steps -->
+    <div class="card">
+      <div class="section-title">Steps</div>
+    <p></p>
+    <ul class="list-group">
+      <li class="list-group-item">
+        1. put rice to cook
+      </li>
+      <li class="list-group-item">
+        2. put oil in small pot and turn on heat for pan
+      </li>
+      <li class="list-group-item">
+        3. cut 6 sausages and put to cook in pan (no oil needed)
+      </li>
+      <li class="list-group-item">
+        4. cut 2 jalapenos or 2 chiles serranos and add to pot with oil to cook
+      </li>
+      <li class="list-group-item">
+        5. cut 1 onion
+      </li>
+      <li class="list-group-item">
+        6. add onion to pot with chiles and let them cook while the sausages also cook
+      </li>
+      <li class="list-group-item">
+        7. cut 3 small tomatoes or 2 large tomatoes
+      </li>
+      <li class="list-group-item">
+        8. add tomatoes to pan with sausages
+      </li>
+      <li class="list-group-item">
+        9. when everything is mostly cooked add it all to the pan with the sausages and add a 1/2 tbsp red powder and mix
+      </li>
+      <li class="list-group-item">
+        10. let everything look for a few more minutes and then it's done
+      </li>
+    </ul>
+    </div>
+  </div>
+  
+  <div id="bottomnavbar"></div>
+  <script>
+     fetch('../bottomnavbar.html')
+       .then(response => response.text())
+       .then(data => document.getElementById('bottomnavbar').innerHTML = data);
+  </script>
+
+</body>
+  <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+</html>
